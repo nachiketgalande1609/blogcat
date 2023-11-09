@@ -11,6 +11,8 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
     <link rel="stylesheet" href="../static/hover.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     {% if title %}
         <title>Flask Blog - {{ title }}</title>
     {% else %}
@@ -49,17 +51,6 @@
     <main role="main" class="container">
       <div class="row">
 
-        <div class="col-md-4">
-          <div class="content-section">
-            <img src="../static/logo.png" width="100px" alt="">
-            <span id="demo">BlogCat</span>
-            <p class='text-muted'>BlogCat is a free blogging site created by Nachiket Galande</p>
-            <a href="https://www.instagram.com/__nix__photography__/?hl=en"><img class="hvr-float-shadow" src="../static/instagram.png" width="30px" alt=""></a>
-            <a href="https://www.linkedin.com/in/nachiket-galande-a855071ab"><img class="hvr-float-shadow" src="../static/linkedin.png" width="30px" alt=""></a>
-            <a href="mailto:nachiketgalande1609@gmail.com"><img class="hvr-float-shadow" src="../static/email.png" width="30px" alt=""></a>
-          </div>
-        </div>
-
         <div class="col-md-8">
           {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
@@ -72,6 +63,18 @@
           {% endwith %}
           {% block content %}{% endblock %}
         </div>
+
+        <div class="col-md-4">
+          <div class="content-section">
+            <img src="../static/logo.png" width="100px" alt="">
+            <span id="demo">BlogCat</span>
+            <p class='text-muted'>BlogCat is a free blogging site created by Nachiket Galande</p>
+            <a href="https://www.instagram.com/__nix__photography__/?hl=en"><img class="hvr-float-shadow" src="../static/instagram.png" width="30px" alt=""></a>
+            <a href="https://www.linkedin.com/in/nachiket-galande-a855071ab"><img class="hvr-float-shadow" src="../static/linkedin.png" width="30px" alt=""></a>
+            <a href="mailto:nachiketgalande1609@gmail.com"><img class="hvr-float-shadow" src="../static/email.png" width="30px" alt=""></a>
+          </div>
+        </div>
+
       </div>
     </main>
 
